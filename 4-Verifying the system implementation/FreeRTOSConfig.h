@@ -119,7 +119,7 @@ extern unsigned int cpu_load;
 										 if (strcmp( (pxCurrentTCB->pcTaskName), "L1" ) == 0 )						{ GPIO_write( PORT_0 , PIN5 , PIN_IS_LOW); execution_time += T1TC-Simulation1_inTime;}  \
 										 if (strcmp( (pxCurrentTCB->pcTaskName), "L2" ) == 0 )						{ GPIO_write( PORT_0 , PIN6 , PIN_IS_LOW); execution_time += T1TC-Simulation2_inTime;}  \
 										 if (strcmp( (pxCurrentTCB->pcTaskName), "IDLE" ) == 0 )					{ GPIO_write( PORT_0 , PIN7 , PIN_IS_LOW); }  						\
-										 cpu_load = (execution_time / T1TC) / 100;														\
+										 cpu_load = execution_time * 100 / T1TC;												\
 									   }while(0)
 
 
